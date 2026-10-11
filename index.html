@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123f38">
+  <meta name="description" content="एक गाँव, सबकी आवाज़। सरपंच उम्मीदवारों का अनौपचारिक जनमत सर्वेक्षण।">
+  <title>ग्राम आवाज़ · सरपंच जनमत सर्वेक्षण</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/voting.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#candidates" data-copy="skip">उम्मीदवारों पर जाएँ</a>
+  <div class="reading-progress" aria-hidden="true"><span id="reading-progress"></span></div>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="ग्राम आवाज़, मुख्य पृष्ठ">
+        <span class="brand-mark" data-icon="ballot" aria-hidden="true"></span>
+        <span class="brand-text"><strong data-copy="brand">ग्राम आवाज़</strong><small data-copy="brand_caption">एक गाँव. सबकी आवाज़.</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="मुख्य नेविगेशन">
+        <a href="#candidates" data-copy="nav_candidates">उम्मीदवार</a>
+        <a href="#results" data-copy="nav_results" data-results-link>परिणाम</a>
+        <a href="#how-it-works" data-copy="nav_how">कैसे काम करता है</a>
+      </nav>
+      <a class="header-cta" href="#candidates"><span data-copy="vote">वोट दें</span><span data-icon="arrow" aria-hidden="true"></span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-heading">
+      <img class="hero-image" id="hero-image" src="assets/images/village.webp" alt="राजस्थान के गाँव का सांकेतिक दृश्य" width="1600" height="914" fetchpriority="high">
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <div class="hero-eyebrow"><span class="status-dot" aria-hidden="true"></span><span id="hero-eyebrow">ग्राम पंचायत जनमत सर्वेक्षण</span></div>
+          <p class="hero-location"><span data-icon="pin" aria-hidden="true"></span><span id="hero-location">एक गाँव, एक साझा आवाज़</span></p>
+          <h1 id="hero-heading"><span>आपकी पसंद,</span><span class="accent">आपकी आवाज़।</span></h1>
+          <p class="hero-description" id="hero-description">अपने गाँव के सरपंच उम्मीदवारों को जानें और अपनी पसंद दर्ज करें।</p>
+          <div class="hero-actions">
+            <a class="button button-saffron" href="#candidates"><span data-copy="see_candidates">उम्मीदवार देखें</span><span data-icon="arrow" aria-hidden="true"></span></a>
+            <a class="button button-glass" href="#results" data-results-link><span data-icon="chart" aria-hidden="true"></span><span data-copy="see_results">मतदान परिणाम</span></a>
+          </div>
+          <p class="hero-disclaimer"><span data-icon="info" aria-hidden="true"></span><span id="hero-notice">यह एक अनौपचारिक जनमत सर्वेक्षण है।</span></p>
+        </div>
+        <div class="village-plaque">
+          <span class="plaque-icon" data-icon="village" aria-hidden="true"></span>
+          <span class="plaque-label" data-copy="our_panchayat">हमारी ग्राम पंचायत</span>
+          <strong id="plaque-name">—</strong>
+          <span id="plaque-district">—</span>
+          <span class="plaque-line" aria-hidden="true"></span>
+          <span class="plaque-message" data-copy="plaque_message">गाँव की बात, गाँव के साथ।</span>
+        </div>
+      </div>
+      <a class="scroll-hint" href="#overview"><span class="scroll-mouse" aria-hidden="true"></span><span data-copy="scroll">आगे देखें</span></a>
+    </section>
+
+    <section class="overview container" id="overview" aria-label="सर्वेक्षण एक नज़र में">
+      <div class="stat"><span class="stat-icon" data-icon="users" aria-hidden="true"></span><div><strong id="stat-candidates">—</strong><span data-copy="total_candidates">कुल उम्मीदवार</span></div></div>
+      <div class="stat" id="published-stat"><span class="stat-icon" data-icon="ballot" aria-hidden="true"></span><div><strong id="stat-votes">—</strong><span data-copy="published_total">प्रकाशित कुल वोट</span></div></div>
+      <div class="stat"><span class="stat-icon" data-icon="pin" aria-hidden="true"></span><div><strong class="stat-name" id="stat-village">—</strong><span data-copy="gram_panchayat">ग्राम पंचायत</span></div></div>
+      <div class="stat"><span class="stat-icon" data-icon="clock" aria-hidden="true"></span><div><strong class="stat-status" id="stat-status">—</strong><span data-copy="survey_status">सर्वेक्षण की स्थिति</span></div></div>
+    </section>
+
+    <section class="section candidates-section" id="candidates" aria-labelledby="candidates-heading">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><p class="eyebrow"><span></span><span data-copy="candidate_eyebrow">अपने गाँव के उम्मीदवार</span></p><h2 id="candidates-heading" data-copy="candidate_heading">पसंद आपकी, फैसला आपका।</h2><p class="section-description" data-copy="candidate_description">हर उम्मीदवार को जानें। अपनी पसंद सोच-समझकर चुनें।</p></div>
+          <span class="section-chip"><span data-icon="users" aria-hidden="true"></span><span id="candidate-chip">—</span></span>
+        </div>
+        <div class="demo-note" id="demo-note" hidden><span data-icon="info" aria-hidden="true"></span><p id="demo-note-text"></p></div>
+        <div class="choice-banner" id="choice-banner" role="status" aria-live="polite" hidden><span data-icon="check" aria-hidden="true"></span><div><strong id="choice-banner-title"></strong><p id="choice-banner-description"></p></div></div>
+        <div class="load-error" id="load-error" role="alert" hidden><span data-icon="info" aria-hidden="true"></span><h3>जानकारी लोड नहीं हो सकी</h3><p id="load-error-text"></p><button class="button button-teal" id="retry-load" type="button">फिर कोशिश करें</button></div>
+        <div class="candidate-grid" id="candidate-grid" aria-busy="true">
+          <div class="candidate-skeleton" aria-hidden="true"><div></div><span></span><span></span><span></span></div>
+          <div class="candidate-skeleton" aria-hidden="true"><div></div><span></span><span></span><span></span></div>
+          <div class="candidate-skeleton" aria-hidden="true"><div></div><span></span><span></span><span></span></div>
+        </div>
+        <p class="section-footnote"><span data-icon="shield" aria-hidden="true"></span><span data-copy="browser_note">एक बार की पसंद इस ब्राउज़र में याद रखी जाती है।</span></p>
+      </div>
+    </section>
+
+    <section class="results-section section" id="results" aria-labelledby="results-heading">
+      <div class="container results-layout">
+        <div class="results-intro reveal">
+          <p class="eyebrow light"><span></span><span data-copy="result_eyebrow">जनमत की एक झलक</span></p>
+          <h2 id="results-heading" data-copy="result_heading">गाँव की पसंद,<br>एक नज़र में।</h2>
+          <p data-copy="result_description">उम्मीदवारों के प्रकाशित आँकड़े देखें। हर आवाज़ की अपनी जगह है।</p>
+          <div class="result-total"><strong id="result-total">—</strong><span data-copy="published_total">प्रकाशित कुल वोट</span></div>
+          <div class="updated-label"><span data-icon="clock" aria-hidden="true"></span><span data-copy="updated">अंतिम अपडेट</span><time id="updated-at">—</time></div>
+          <button class="button button-outline-light" id="refresh-results" type="button"><span data-icon="refresh" aria-hidden="true"></span><span data-copy="refresh">ताज़ा आँकड़े देखें</span></button>
+        </div>
+        <div class="results-panel reveal">
+          <div class="results-panel-header"><strong data-copy="published_results">प्रकाशित परिणाम</strong><span class="manual-tag" data-copy="manual_tag">मैन्युअल अपडेट</span></div>
+          <div id="result-list" class="result-list"></div>
+          <div class="result-note"><span data-icon="info" aria-hidden="true"></span><p data-copy="result_note">ये आँकड़े संचालक द्वारा JSON में प्रकाशित किए जाते हैं। आपकी ब्राउज़र में दर्ज पसंद इन आँकड़ों में अपने-आप नहीं जुड़ती।</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section how-section" id="how-it-works" aria-labelledby="how-heading">
+      <div class="container">
+        <div class="section-heading centered reveal"><p class="eyebrow"><span></span><span data-copy="how_eyebrow">बस तीन आसान कदम</span></p><h2 id="how-heading" data-copy="how_heading">अपनी आवाज़ यूँ दर्ज करें।</h2><p class="section-description" data-copy="how_description">सरल प्रक्रिया, स्पष्ट जानकारी।</p></div>
+        <div id="steps" class="steps-grid"></div>
+        <div class="transparency reveal"><span class="transparency-icon" data-icon="shield" aria-hidden="true"></span><div><h3 data-copy="transparency_heading">आपकी जानकारी, आपके ब्राउज़र में।</h3><p data-copy="transparency_text">हम नाम, मोबाइल नंबर या पहचान नहीं माँगते। आपकी पसंद सिर्फ इसी ब्राउज़र में रहती है; यह वास्तविक सरकारी मतदान नहीं है।</p></div><span class="transparency-seal" data-icon="check" aria-hidden="true"></span></div>
+        <div class="faq reveal"><h3 data-copy="faq_heading">कुछ ज़रूरी बातें</h3><div id="faq-list"></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-top"><div class="footer-brand"><span class="brand-mark" data-icon="ballot" aria-hidden="true"></span><div><strong data-copy="brand">ग्राम आवाज़</strong><p id="footer-panchayat">ग्राम पंचायत</p></div></div><p id="footer-notice">यह एक अनौपचारिक जनमत सर्वेक्षण है।</p><a href="#candidates" class="footer-link"><span data-copy="see_candidates">उम्मीदवार देखें</span><span data-icon="arrow" aria-hidden="true"></span></a></div>
+    <div class="container footer-bottom"><p id="copyright"></p><span data-copy="footer_caption">गाँव से जुड़ें। अपनी बात कहें।</span></div>
+  </footer>
+  <nav class="mobile-dock" aria-label="मोबाइल नेविगेशन"><a href="#candidates"><span data-icon="users" aria-hidden="true"></span><span data-copy="nav_candidates">उम्मीदवार</span></a><a href="#results" data-results-link><span data-icon="chart" aria-hidden="true"></span><span data-copy="nav_results">परिणाम</span></a><a href="#how-it-works"><span data-icon="info" aria-hidden="true"></span><span data-copy="nav_how_short">जानकारी</span></a></nav>
+  <a href="#top" class="back-top" id="back-top" aria-label="ऊपर जाएँ"><span data-icon="up" aria-hidden="true"></span></a>
+
+  <dialog class="vote-dialog" id="vote-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-note">
+    <div class="dialog-content">
+      <button class="dialog-close" id="dialog-close" type="button" aria-label="बंद करें"><span data-icon="close" aria-hidden="true"></span></button>
+      <div id="confirm-view"><span class="dialog-eyebrow" data-copy="confirm_eyebrow">आपकी पसंद मायने रखती है</span><h2 id="dialog-title" data-copy="confirm_heading">क्या यही आपकी पसंद है?</h2><div class="dialog-candidate"><img id="dialog-photo" alt="" width="112" height="112"><div><strong id="dialog-name"></strong><span id="dialog-village"></span></div></div><p id="dialog-note" data-copy="confirm_note">पसंद इस ब्राउज़र में दर्ज होगी। इसे यहाँ दोबारा बदल नहीं सकेंगे। यह सार्वजनिक वोट काउंट में अपने-आप नहीं जुड़ेगी।</p><p class="dialog-error" id="dialog-error" role="alert" hidden></p><button class="button button-teal dialog-confirm" id="confirm-vote" type="button"><span data-icon="ballot" aria-hidden="true"></span><span data-copy="confirm_vote">हाँ, वोट दें</span></button><button class="dialog-back" id="cancel-vote" type="button" data-copy="cancel">वापस जाएँ</button></div>
+      <div id="success-view" hidden><div class="success-check" aria-hidden="true"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="36"></circle><path d="m23 40 11 11 24-24"></path></svg></div><span class="dialog-eyebrow" data-copy="success_eyebrow">आपकी आवाज़ दर्ज हुई</span><h2 id="success-title" data-copy="success_heading">अपनी बात रखने के लिए धन्यवाद!</h2><p id="success-name"></p><p class="success-message" data-copy="success_message">आपकी पसंद इस ब्राउज़र में दर्ज कर ली गई है।</p><p class="success-note" data-copy="success_note">प्रकाशित सार्वजनिक आँकड़े संचालक अलग से अपडेट करते हैं।</p><button class="button button-teal" id="finish-vote" type="button" data-copy="finish">ठीक है</button></div>
+    </div>
+  </dialog>
+  <div class="confetti-layer" id="confetti-layer" aria-hidden="true"></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <noscript><div class="noscript-notice">यह पृष्ठ चलाने के लिए JavaScript चालू करें।</div></noscript>
+</body>
+</html>

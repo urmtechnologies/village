@@ -1,0 +1,18 @@
+[
+  {
+    "key": "village",
+    "prompt": "Use case: photorealistic-natural. Asset type: full-width background photo for an elegant Hindi public opinion poll website, not a UI screenshot. Create a cinematic wide editorial photograph of a small rural Rajasthan village at golden hour. Traditional warm sandstone homes and a modest village square, green fields at the edge, a spreading mature tree, distant low hills, understated Indian rural authenticity. 1792x1024 landscape composition, natural realistic colors, atmospheric sunlight. The left half should have a calm darker open view with unobtrusive shadowed vegetation so white headline text can later overlay it; strongest village detail in the right half. No people close to camera, no election posters, no political symbols, no text, no logos, no watermarks, no dramatic fantasy architecture. Professional travel photography."
+  },
+  {
+    "key": "candidate_1",
+    "prompt": "Use case: photorealistic-natural. Asset type: demo candidate portrait photo for a Hindi village opinion-poll website. One entirely fictional middle-aged Indian rural Rajasthan man, about 52, warm medium brown skin, salt and pepper short hair and neatly groomed mustache, wearing a plain off-white cotton kurta and muted beige waistcoat. Natural composed friendly expression, looking at camera. Centered head and upper torso, plenty of breathing room above the head, head fully visible, vertical 4:5 portrait composition. Soft warm daylight, a softly blurred sandstone courtyard and subtle green trees behind him. Authentic photographic skin texture, premium editorial headshot, not glamorous, respectful and neutral. No political symbols, no party logos, no badges, no text, no watermark. A fictional illustrative demo person only."
+  },
+  {
+    "key": "candidate_2",
+    "prompt": "Use case: photorealistic-natural. Asset type: demo candidate portrait photo for a Hindi village opinion-poll website. One entirely fictional Indian rural Rajasthan woman, about 43, warm medium brown skin, wearing a plain muted rust terracotta sari draped respectfully over her hair, simple small gold earrings. Natural composed friendly expression, looking at camera. Centered head and upper torso, plenty of breathing room above the head, head fully visible, vertical 4:5 portrait composition. Soft warm daylight, a softly blurred sandstone courtyard and subtle green trees behind her. Authentic photographic skin texture, premium editorial headshot, not glamorous, respectful and neutral. No political symbols, no party logos, no badges, no text, no watermark. A fictional illustrative demo person only."
+  },
+  {
+    "key": "candidate_3",
+    "prompt": "Use case: photorealistic-natural. Asset type: demo candidate portrait photo for a Hindi village opinion-poll website. One entirely fictional Indian rural Rajasthan man, about 36, warm medium brown skin, neatly styled short black hair and a modest neatly trimmed beard, wearing a plain white cotton kurta with a muted dusty teal Nehru vest. Natural composed friendly expression, looking at camera. Centered head and upper torso, plenty of breathing room above the head, head fully visible, vertical 4:5 portrait composition. Soft warm daylight, a softly blurred sandstone courtyard and subtle green trees behind him. Authentic photographic skin texture, premium editorial headshot, not glamorous, respectful and neutral. No political symbols, no party logos, no badges, no text, no watermark. A fictional illustrative demo person only."
+  }
+]
